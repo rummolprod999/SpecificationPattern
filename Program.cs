@@ -6,7 +6,15 @@ namespace SpetificationPattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ISpecification spetification =
+                new ExampleSpecification1()
+                    .Or(new ExampleSpecification1()
+                        .And(new ExampleSpecification2()));
+            
+            if (spetification.IsSatisfiedBy(new Object()))
+            {
+                Console.WriteLine("specification success");
+            }
         }
     }
 }

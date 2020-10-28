@@ -1,15 +1,15 @@
 namespace SpetificationPattern
 {
-    public class NotSpecification : CompositeSpecification 
+    public class NotSpecification : CompositeSpecification
     {
         private ISpecification Wrapped;
 
-        public NotSpecification(ISpecification x) 
+        public NotSpecification(ISpecification x)
         {
             Wrapped = x;
         }
 
-        public override bool IsSatisfiedBy(object candidate) 
+        public override bool IsSatisfiedBy(object candidate)
         {
             return !Wrapped.IsSatisfiedBy(candidate);
         }

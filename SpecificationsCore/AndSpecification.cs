@@ -1,17 +1,17 @@
 namespace SpetificationPattern
 {
-    public class AndSpecification : CompositeSpecification 
+    public class AndSpecification : CompositeSpecification
     {
         private ISpecification One;
         private ISpecification Other;
 
-        public AndSpecification(ISpecification x, ISpecification y) 
+        public AndSpecification(ISpecification x, ISpecification y)
         {
             One = x;
             Other = y;
         }
 
-        public override bool IsSatisfiedBy(object candidate) 
+        public override bool IsSatisfiedBy(object candidate)
         {
             return One.IsSatisfiedBy(candidate) && Other.IsSatisfiedBy(candidate);
         }
