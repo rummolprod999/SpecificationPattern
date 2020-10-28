@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SpetificationPattern
+namespace SpecificationPattern
 {
     class Program
     {

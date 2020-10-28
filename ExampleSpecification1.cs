@@ -1,4 +1,4 @@
-namespace SpetificationPattern
+namespace SpecificationPattern
 {
     public class ExampleSpecification1 : CompositeSpecification
     {
